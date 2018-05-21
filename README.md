@@ -16,6 +16,7 @@ network={<br>
   ssid="Your Network SSID" <br>
   psk="Your WPA/WPA2 security key" <br>
   key_mgmt=WPA-PSK <br>
+  scan_ssid=1<br>
 }
 
 5. Insert the SD card into the Raspberry Pi and power up.
