@@ -8,14 +8,14 @@ Wifi and Bluetooth sensing as an IOT device
 4. If you are not using a ethernet connection with internet access, you will need to configure the Wifi access point settings before putting the SD card into the Raspberry Pi.
 4a. Create a file called "wpa_supplicant.conf" in the root of the sd card with this content.
 
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-country=US
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev<br>
+update_config=1<br>
+country=US<br>
 
-network={
-  ssid="Your Network SSID"
-  psk="Your WPA/WPA2 security key"
-  key_mgmt=WPA-PSK
+network={<br>
+  ssid="Your Network SSID" <br>
+  psk="Your WPA/WPA2 security key" <br>
+  key_mgmt=WPA-PSK <br>
 }
 
 5. Insert the SD card into the Raspberry Pi and power up.
