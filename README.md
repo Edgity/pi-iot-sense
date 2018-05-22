@@ -10,7 +10,7 @@ Wifi and Bluetooth sensing as an IOT device
 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev<br>
 update_config=1<br>
-country=US<br>
+country=US or AU (other allowed)<br>
 
 network={<br>
   ssid="Your Network SSID" <br>
