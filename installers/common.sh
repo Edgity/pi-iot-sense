@@ -1,7 +1,6 @@
 piiotsense_dir="/etc/piiotsense"
 piiotsense_user="piiotsense"
 version=`sed 's/\..*//' /etc/debian_version`
-
 # Determine version 
 
 if [ $version -eq 9 ]; then 
