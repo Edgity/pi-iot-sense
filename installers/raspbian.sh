@@ -9,10 +9,12 @@ function update_system_packages() {
 
 function install_dependencies() {
     echo "Installing required packages"
-    sudo apt-get install avahi-daemon
-    sudo insserv avahi-daemon
-    wget -q https://raw.githubusercontent.com/Edgity/pi-iot-sense/master/etc/avahi/services/multiple.service -O /etc/avahi/services/multiple.service  
-    sudo /etc/init.d/avahi-daemon restart
+    #TODO FIX the uDEV part to make the onboard wifi always wlan0
+    
+    #sudo apt-get install avahi-daemon
+    #sudo insserv avahi-daemon
+    #wget -q https://raw.githubusercontent.com/Edgity/pi-iot-sense/master/etc/avahi/services/multiple.service -O /etc/avahi/services/multiple.service  
+    #sudo /etc/init.d/avahi-daemon restart
 }
 
 install_piiotsense
