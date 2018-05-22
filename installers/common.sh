@@ -51,7 +51,6 @@ function update_system_packages() {
 
 # Installs additional dependencies using system package manager
 function install_dependencies() {
-    sudo apt-get install git -y
     # OVERLOAD THIS
     install_error "No function definition for install_dependencies"
 }
@@ -78,6 +77,7 @@ function download_latest_files() {
     fi
 
     install_log "Cloning latest files from github"
+    sudo apt-get install git -y
     git clone --depth 1 https://github.com/Edgity/pi-iot-sense /tmp/piiotsense || install_error "Unable to download files from github"
     sudo mv /tmp/piiotsense $piiotsense_dir || install_error "Unable to move pi iot sense to piiotsense"
 }
