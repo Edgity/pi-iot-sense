@@ -1,6 +1,6 @@
 UPDATE_URL="https://raw.githubusercontent.com/billz/raspap-webgui/master/"
-wget -q ${UPDATE_URL}/installers/common.sh -O /tmp/raspapcommon.sh
-source /tmp/raspapcommon.sh && rm -f /tmp/raspapcommon.sh
+wget -q ${UPDATE_URL}/installers/common.sh -O /tmp/piiotsensecommon.sh
+source /tmp/piiotsensecommon.sh && rm -f /tmp/piiotsensecommon.sh
 
 function update_system_packages() {
     install_log "Updating sources"
@@ -8,8 +8,11 @@ function update_system_packages() {
 }
 
 function install_dependencies() {
-    install_log "Installing required packages"
-    sudo apt-get install lighttpd $php_package git hostapd dnsmasq || install_error "Unable to install dependencies"
+    echo "Installing required packages"
+    sudo apt-get install avahi-daemon
+    sudo insserv avahi-daemon
+    wget -q https://raw.githubusercontent.com/Edgity/pi-iot-sense/master/etc/avahi/services/multiple.service -O /etc/avahi/services/multiple.service  
+    sudo /etc/init.d/avahi-daemon restart
 }
 
-install_raspap
+install_pi-iot-sense
