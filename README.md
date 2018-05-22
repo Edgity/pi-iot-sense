@@ -18,6 +18,10 @@ network={<br>
   scan_ssid=1<br>
 }
 
-5. Insert the SD card into the Raspberry Pi and power up.
-6. Connect your PC to the same ethernet or WiFi network that you specified above.
-7. Using terminal, ssh onto the raspberry Pi.  ssh pi@raspberrypi.local
+5. Create a file called /etc/rc.local on the sd card with this content.
+
+
+
+5. Insert the SD card into the Raspberry Pi and power up.<br>
+6. Connect your PC to the same ethernet or WiFi network that you specified above.<br>
+7. Using terminal, ssh onto the raspberry Pi.  ssh pi@raspberrypi.local<br>
