@@ -15,7 +15,6 @@ country=US or AU (other allowed)<br>
 network={<br>
   ssid="Your Network SSID" <br>
   psk="Your WPA/WPA2 security key" <br>
-  key_mgmt=WPA-PSK <br>
   scan_ssid=1<br>
 }
 
