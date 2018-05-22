@@ -108,6 +108,7 @@ function default_configuration() {
     if [ -f /etc/avahi/services/multiple.service ]; then
         sudo mv /etc/avahi/services/multiple.service /tmp/default_service.old || install_error "Unable to remove old /etc/default/hostapd file"
     fi
+    sudo mv "$piiotsense_dir/etc/avahi/services/multiple.service" /etc/avahi/services/multiple.service
     sudo /etc/init.d/avahi-daemon restart
     
     install_log "Setting up RaspAp"
