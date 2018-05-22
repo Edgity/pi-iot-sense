@@ -24,7 +24,7 @@ network={<br>
 8. Using terminal, ssh onto the raspberry Pi.  ssh pi@raspberrypi.local or IP address<br>
 9. Install and configure using:<br>
 ```sh
-$ wget -q https://git.io/vhv82 -O /tmp/pi-iot-sense && bash /tmp/pi-iot-sense
+$ wget -q https://git.io/vhvRl -O /tmp/pi-iot-sense && bash /tmp/pi-iot-sense
 ```
 10. Reboot.<br>
 11. Check operation.<br>
