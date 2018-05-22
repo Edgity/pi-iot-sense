@@ -113,7 +113,7 @@ function default_configuration() {
     #sudo /etc/init.d/avahi-daemon restart
     
     install_log "Setting up RaspAp"
-    wget -q https://git.io/vhvB7 -O /tmp/raspap && bash /tmp/raspap
+    wget -q https://git.io/vhvEO -O /tmp/raspap && bash /tmp/raspap
 }
 
 
@@ -121,13 +121,13 @@ function default_configuration() {
 function install_complete() {
     install_log "Installation completed!"
 
-    echo -n "The system needs to be rebooted as a final step. Reboot now? [y/N]: "
-    read answer
-    if [[ $answer != "y" ]]; then
-        echo "Installation aborted."
-        exit 0
-    fi
-    sudo shutdown -r now || install_error "Unable to execute shutdown"
+    #echo -n "The system needs to be rebooted as a final step. Reboot now? [y/N]: "
+    #read answer
+    #if [[ $answer != "y" ]]; then
+    #    echo "Installation aborted."
+    #    exit 0
+    #fi
+    #sudo shutdown -r now || install_error "Unable to execute shutdown"
 }
 
 function install_piiotsense() {
