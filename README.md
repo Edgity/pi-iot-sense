@@ -6,7 +6,7 @@ Wifi and Bluetooth sensing as an IOT device
 2. Using a product such as Etcher (mac), burn the Rasbian OS (zip) file to the SD Card.
 3. Create a file called "ssh" in the root of the sd card.
 4. If you are not using a ethernet connection with internet access, you will need to configure the Wifi access point settings before putting the SD card into the Raspberry Pi.
-4a. Create a file called "wpa_supplicant.conf" in the root of the sd card with this content.
+5. Create a file called "wpa_supplicant.conf" in the root of the sd card with this content.
 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev<br>
 update_config=1<br>
@@ -16,11 +16,17 @@ network={<br>
   ssid="Your Network SSID" <br>
   psk="Your WPA/WPA2 security key" <br>
   scan_ssid=1<br>
-}
+}<br>
 
-5. Copy the file https://raw.githubusercontent.com/Edgity/pi-iot-sense/master/etc/rc.local to /etc/rc.local on the sd card with this content.
-6. Create a file called "setup" in the root of the sd card.
+<b>Final configuration steps on Raspberry Pi</b><br>
+6. Insert the SD card into the Raspberry Pi and power up.<br>
+7. Connect your PC to the same ethernet or WiFi network that you specified above.<br>
+8. Using terminal, ssh onto the raspberry Pi.  ssh pi@raspberrypi.local or IP address<br>
+9. Install and configure using:<br>
+  wget -q https://git.io/vhv82 -O /tmp/pi-iot-sense && bash /tmp/pi-iot-sense<br>
+10. Reboot.<br>
+11. Check operation.<br>
 
-5. Insert the SD card into the Raspberry Pi and power up.<br>
-6. Connect your PC to the same ethernet or WiFi network that you specified above.<br>
-7. Using terminal, ssh onto the raspberry Pi.  ssh pi@raspberrypi.local<br>
+<b>Clean-up of SD card for distribution.</b><br>
+12. browse to http://raspberrypi.local on the connected network, remove the wifi client connection.<br>
+12. SD card is ready for distribution.<br>
