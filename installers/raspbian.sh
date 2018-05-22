@@ -1,4 +1,4 @@
-UPDATE_URL="https://raw.githubusercontent.com/billz/raspap-webgui/master/"
+UPDATE_URL="https://raw.githubusercontent.com/Edgity/pi-iot-sense/master/"
 wget -q ${UPDATE_URL}/installers/common.sh -O /tmp/piiotsensecommon.sh
 source /tmp/piiotsensecommon.sh && rm -f /tmp/piiotsensecommon.sh
 
