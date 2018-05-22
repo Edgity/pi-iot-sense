@@ -1,0 +1,6 @@
+if [ -e /boot/setup]
+then
+  sudo apt-get install avahi-daemon
+  sudo insserv avahi-daemon
+  sudo /etc/init.d/avahi-daemon restart
+fi
