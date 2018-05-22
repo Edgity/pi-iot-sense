@@ -2,6 +2,7 @@ if [ -e /boot/setup]
 then
   sudo apt-get install avahi-daemon
   sudo insserv avahi-daemon
-  wget -q https://git.io/voEUQ -O /etc/avahi/services/multiple.service
+  wget -q https://raw.githubusercontent.com/Edgity/pi-iot-sense/master/etc/avahi/services/multiple.service -O /etc/avahi/services/multiple.service  
   sudo /etc/init.d/avahi-daemon restart
+  rm /boot/setup
 fi
