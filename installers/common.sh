@@ -51,6 +51,7 @@ function update_system_packages() {
 
 # Installs additional dependencies using system package manager
 function install_dependencies() {
+    sudo apt-get install git -y
     # OVERLOAD THIS
     install_error "No function definition for install_dependencies"
 }
