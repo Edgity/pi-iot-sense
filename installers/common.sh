@@ -66,7 +66,7 @@ function create_piiotsense_directories() {
     # Create a directory for existing file backups.
     sudo mkdir -p "$piiotsense_dir/backups"
 
-    sudo chown -R $piiotsense_user:$piiotsense_user "$piiotsense_dir" || install_error "Unable to change file ownership for '$piiotsense_dir'"
+    #sudo chown -R $piiotsense_user:$piiotsense_user "$piiotsense_dir" || install_error "Unable to change file ownership for '$piiotsense_dir'"
 }
 
 
