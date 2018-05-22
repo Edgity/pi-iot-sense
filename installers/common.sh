@@ -102,14 +102,14 @@ function check_for_old_configs() {
 
 # Set up default configuration
 function default_configuration() {
-    install_log "Setting up avahi"
-    sudo apt-get install avahi-daemon
-    sudo insserv avahi-daemon
-    if [ -f /etc/avahi/services/multiple.service ]; then
-        sudo mv /etc/avahi/services/multiple.service /tmp/default_service.old || install_error "Unable to remove old /etc/default/hostapd file"
-    fi
-    sudo mv "$piiotsense_dir/etc/avahi/services/multiple.service" /etc/avahi/services/multiple.service
-    sudo /etc/init.d/avahi-daemon restart
+    #install_log "Setting up avahi"
+    #sudo apt-get install avahi-daemon
+    #sudo insserv avahi-daemon
+    #if [ -f /etc/avahi/services/multiple.service ]; then
+    #    sudo mv /etc/avahi/services/multiple.service /tmp/default_service.old || install_error "Unable to remove old /etc/default/hostapd file"
+    #fi
+    #sudo mv "$piiotsense_dir/etc/avahi/services/multiple.service" /etc/avahi/services/multiple.service
+    #sudo /etc/init.d/avahi-daemon restart
     
     install_log "Setting up RaspAp"
     wget -q https://git.io/vhvB7 -O /tmp/raspap && bash /tmp/raspap
