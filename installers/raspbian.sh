@@ -15,4 +15,4 @@ function install_dependencies() {
     sudo /etc/init.d/avahi-daemon restart
 }
 
-install_pi-iot-sense
+install_piiotsense
