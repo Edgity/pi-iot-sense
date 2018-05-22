@@ -19,6 +19,7 @@ network={<br>
 }
 
 5. Copy the file https://raw.githubusercontent.com/Edgity/pi-iot-sense/master/etc/rc.local to /etc/rc.local on the sd card with this content.
+6. Create a file called "setup" in the root of the sd card.
 
 5. Insert the SD card into the Raspberry Pi and power up.<br>
 6. Connect your PC to the same ethernet or WiFi network that you specified above.<br>
