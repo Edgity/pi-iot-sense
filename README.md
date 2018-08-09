@@ -38,7 +38,7 @@ network={<br>
 14b. ./configure<br>
 15. sudo make<br>
 16. sudo make install<br>
-17. sudo s airodump-ng-oui-update<br>
+17. sudo airodump-ng-oui-update<br>
 
 <b>To Check monitoring mode</b><br>
 a. sudo s airmon-ng start wlan0<br>
@@ -53,5 +53,5 @@ $ wget -q https://git.io/vhvRl -O /tmp/pi-iot-sense && bash /tmp/pi-iot-sense
 20. Check operation.<br>
 
 <b>Clean-up of SD card for distribution.</b><br>
-12. browse to http://raspberrypi.local on the connected network, remove the wifi client connection.<br>
-12. SD card is ready for distribution.<br>
+21. browse to http://raspberrypi.local on the connected network, remove the wifi client connection.<br>
+22. SD card is ready for distribution.<br>
