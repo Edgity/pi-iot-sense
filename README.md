@@ -34,6 +34,8 @@ network={<br>
 12. wget  https://download.aircrack-ng.org/aircrack-ng-1.3.tar.gz<br>
 13. tar -zxvf aircrack-ng-1.3.tar.gz<br>
 14. cd aircrack-ng-1.3<br>
+14a. autoreconf -i<br>
+14b. ./configure<br>
 15. sudo make<br>
 16. sudo make install<br>
 17. sudo s airodump-ng-oui-update<br>
