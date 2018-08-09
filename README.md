@@ -29,7 +29,8 @@ network={<br>
 10. sudo rpi-update<br>
 
 <b>Install AirMon-ng for wifi monitoring mode</b><br>
-11. sudo apt-get -y install libssl-dev libnl-3-dev libnl-genl-3-dev ethtool<br>
+11. #sudo apt-get -y install libssl-dev libnl-3-dev libnl-genl-3-dev ethtool<br>
+11. sudo apt-get install build-essential autoconf automake libtool pkg-config libnl-3-dev libnl-genl-3-dev libssl-dev libsqlite3-dev libpcre3-dev ethtool shtool rfkill zlib1g-dev libpcap-dev<br>
 12. wget  https://download.aircrack-ng.org/aircrack-ng-1.3.tar.gz<br>
 13. tar -zxvf aircrack-ng-1.3.tar.gz<br>
 14. cd aircrack-ng-1.3<br>
