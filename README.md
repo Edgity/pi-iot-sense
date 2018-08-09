@@ -24,22 +24,22 @@ network={<br>
 7. Connect your PC to the same ethernet or WiFi network that you specified above.<br>
 8. Using terminal, ssh onto the raspberry Pi.  ssh pi@raspberrypi.local or IP address<br>
 
-<b>Upgrade OS</b>
-9. sudo apt-get update && sudo apt-get upgrade
-10. sudo rpi-update
+<b>Upgrade OS</b><br>
+9. sudo apt-get update && sudo apt-get upgrade<br>
+10. sudo rpi-update<br>
 
-<b>Install AirMon-ng for wifi monitoring mode
-11. sudo apt-get -y install libssl-dev libnl-3-dev libnl-genl-3-dev ethtool
-12. wget  https://download.aircrack-ng.org/aircrack-ng-1.3.tar.gz
-13. tar -zxvf aircrack-ng-1.3.tar.gz
-14. cd aircrack-ng-1.3
-15. sudo make
-16. sudo make install
-17. sudo s airodump-ng-oui-update
+<b>Install AirMon-ng for wifi monitoring mode</b><br>
+11. sudo apt-get -y install libssl-dev libnl-3-dev libnl-genl-3-dev ethtool<br>
+12. wget  https://download.aircrack-ng.org/aircrack-ng-1.3.tar.gz<br>
+13. tar -zxvf aircrack-ng-1.3.tar.gz<br>
+14. cd aircrack-ng-1.3<br>
+15. sudo make<br>
+16. sudo make install<br>
+17. sudo s airodump-ng-oui-update<br>
 
-To Check monitoring mode	
-a. sudo s airmon-ng start wlan0
-b. sudo airodump-ng wlan0mon
+<b>To Check monitoring mode</b><br>
+a. sudo s airmon-ng start wlan0<br>
+b. sudo airodump-ng wlan0mon<br>
 
 <b>Install Web Client Management tools</b>
 18. Install and configure using:<br>
