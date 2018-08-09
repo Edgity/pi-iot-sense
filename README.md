@@ -18,16 +18,36 @@ network={<br>
   scan_ssid=1<br>
 }<br>
 
+
 <b>Final configuration steps on Raspberry Pi</b><br>
 6. Insert the SD card into the Raspberry Pi and power up.<br>
 7. Connect your PC to the same ethernet or WiFi network that you specified above.<br>
 8. Using terminal, ssh onto the raspberry Pi.  ssh pi@raspberrypi.local or IP address<br>
-9. Install and configure using:<br>
+
+<b>Upgrade OS</b>
+9. sudo apt-get update && sudo apt-get upgrade
+10. sudo rpi-update
+
+<b>Install AirMon-ng for wifi monitoring mode
+11. sudo apt-get -y install libssl-dev libnl-3-dev libnl-genl-3-dev ethtool
+12. wget  https://download.aircrack-ng.org/aircrack-ng-1.3.tar.gz
+13. tar -zxvf aircrack-ng-1.3.tar.gz
+14. cd aircrack-ng-1.3
+15. sudo make
+16. sudo make install
+17. sudo s airodump-ng-oui-update
+
+To Check monitoring mode	
+a. sudo s airmon-ng start wlan0
+b. sudo airodump-ng wlan0mon
+
+<b>Install Web Client Management tools</b>
+18. Install and configure using:<br>
 ```sh
 $ wget -q https://git.io/vhvRl -O /tmp/pi-iot-sense && bash /tmp/pi-iot-sense
 ```
-10. Reboot.<br>
-11. Check operation.<br>
+19. Reboot.<br>
+20. Check operation.<br>
 
 <b>Clean-up of SD card for distribution.</b><br>
 12. browse to http://raspberrypi.local on the connected network, remove the wifi client connection.<br>
