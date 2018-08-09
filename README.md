@@ -29,6 +29,7 @@ network={<br>
 10. sudo rpi-update<br>
 
 <b>Install AirMon-ng for wifi monitoring mode</b><br>
+11. QUICK WAY ... then skip to 17a.  sudo apt-get install aircrack-ng
 11. #sudo apt-get -y install libssl-dev libnl-3-dev libnl-genl-3-dev ethtool<br>
 11. sudo apt-get install build-essential autoconf automake libtool pkg-config libnl-3-dev libnl-genl-3-dev libssl-dev libsqlite3-dev libpcre3-dev ethtool shtool rfkill zlib1g-dev libpcap-dev<br>
 12. wget  https://download.aircrack-ng.org/aircrack-ng-1.3.tar.gz<br>
@@ -41,7 +42,7 @@ network={<br>
 17. sudo airodump-ng-oui-update<br>
 
 <b>To Check monitoring mode</b><br>
-a. sudo s airmon-ng start wlan0<br>
+a. sudo airmon-ng start wlan0<br>
 b. sudo airodump-ng wlan0mon<br>
 
 <b>Install Web Client Management tools</b>
