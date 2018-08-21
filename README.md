@@ -60,9 +60,23 @@ $ wget -q https://git.io/vhvRl -O /tmp/pi-iot-sense && bash /tmp/pi-iot-sense
 You may need to change the /etc/hostapd/hostapd.conf to open WPA security...
 ```sh
 interface=wlan0
-ssid=Raspberry_Free
+ssid=edgity
+ignore_broadcast_ssid=1
 hw_mode=g
 channel=6
 auth_algs=1
 wmm_enabled=0
 ```
+
+I updated /etc/init.d/hostapd like this :
+in start section, added command killall wpa_supplicant
+```sh
+start)
+log_daemon_msg "Starting $DESC" "$NAME"
+killall wpa_supplicant
+start-stop-daemon --start --oknodo --quiet --exec "$DAEMON_SBIN" \
+--pidfile "$PIDFILE" -- $DAEMON_OPTS >/dev/null
+log_end_msg "$?"
+;;
+```
+
