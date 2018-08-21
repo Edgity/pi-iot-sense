@@ -56,3 +56,13 @@ $ wget -q https://git.io/vhvRl -O /tmp/pi-iot-sense && bash /tmp/pi-iot-sense
 <b>Clean-up of SD card for distribution.</b><br>
 21. browse to http://raspberrypi.local on the connected network, remove the wifi client connection.<br>
 22. SD card is ready for distribution.<br>
+
+You may need to change the /etc/hostapd/hostapd.conf to open WPA security...
+```sh
+interface=wlan0
+ssid=Raspberry_Free
+hw_mode=g
+channel=6
+auth_algs=1
+wmm_enabled=0
+```
